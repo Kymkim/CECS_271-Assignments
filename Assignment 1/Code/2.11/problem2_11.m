@@ -28,10 +28,10 @@ else
     disp("The Fahrenheit temperature is " + f)
 end
 
-%Part B: Line 31-
+%Part B: Line 31-35
 format bank
-Celsius = [20:1:30];
+Celsius = [20:1:30]; % Create an array of numbers from 20 to 30 in 1 increments
 disp(["Celsius", "Farenheit"]);
-disp([Celsius', ((Celsius*9/5) + 32)']);
+disp([Celsius', ((Celsius*9/5) + 32)']); %Display conversion column-wise
 
 
