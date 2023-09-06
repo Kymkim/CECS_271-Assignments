@@ -3,7 +3,7 @@ Name: Assignment 1: Problem 1.2
 Date: 09/04/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
-Purpose: Purpose: In this problem, we are tasked to modify the scipt given in 
+Purpose: In this problem, we are tasked to modify the scipt given in 
 Section 1.2.5 in order to learn various functionalities in MATLAB such as using 
 for loops, pause, and math functions.
 Last updated: 09/05/2023
