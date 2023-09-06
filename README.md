@@ -7,8 +7,8 @@ Repository for CECS 271 Lab and Assignments. Don't forget to push and commit cha
 To keep everything organized let's format the folders as such:
 ```
 Main Folder
-├── Assignment #
+└── Assignment #
     └── [Problem Number]
         ├── Output          #For output files (i.e graphs)
-        └── codefile.m   
+        └── codefile.m
 ``` 
