@@ -33,6 +33,5 @@ format bank
 % Create 2 arrays containing temps in C and calculate for F in 2nd array (B)
 A = [20:1:30];
 B = [(A*9/5) + 32];
-T = table(A',B','VariableNames',["Celsius","Fahrenheit"]);
-disp(T)
+table(A',B',"VariableNames",{"C",""});
 
