@@ -1,24 +1,35 @@
 %{
-Name: Assignemt 1: Problem 1.2
+Name: Assignemt 1: Problem 1.2.a
 Date: 09/04/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
-Purpose: In Section 1.2.5 of the text a script is given for an animation of the Mexican
-hat problem. Type this into the editor, save it and execute it. Once you
-nish debugging it and it executes successfully try modifying it. (a) Change
-the maximum value of n from 3 to 4 and execute the script. (b) Change
-the time delay in the pause function from 0.05 to 0.1. (c) Change the
-z=sin(r.*n)./r; command line to z=cos(r.*n); and execute the script.
+Purpose: Purpose: In this problem, we are tasked to modify the scipt given in 
+Section 1.2.5 in order to learn various functionalities in MATLAB such as using 
+for loops, pause, and math functions.
 Last updated: 09/05/2023
 %}
 
+%Code provided in Section 1.2.5
 [x y ] = meshgrid(-8 : 0.5 : 8);
 r = sqrt(x.^2 + y.^2) + eps;
+
+% Modefied per instructions in part A
+% for n=-3:0.05:3;
 for n=-4:0.05:4;
-    z=sin(r.*n)./r;
+
+    %Modefied per instructions in part C
+    %z=sin(r.*n)./r; 
+    z=cos(r.*n);
+
     surf(z), view(-37, 38), axis([0,40,0,40,-4,4]);
-    pause(0.05);
+
+    % Modefided based on instructions in part B
+    %pause(0.05)
+    pause(0.1);                           
 end
+
+
+
 
 
 
