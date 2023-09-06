@@ -1,5 +1,5 @@
 %{
-Name: Assignemt 1: Problem 1.2.a
+Name: Assignemt 1: Problem 1.2
 Date: 09/04/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
@@ -9,7 +9,7 @@ nish debugging it and it executes successfully try modifying it. (a) Change
 the maximum value of n from 3 to 4 and execute the script. (b) Change
 the time delay in the pause function from 0.05 to 0.1. (c) Change the
 z=sin(r.*n)./r; command line to z=cos(r.*n); and execute the script.
-Last updated: 09/04/2023
+Last updated: 09/05/2023
 %}
 
 [x y ] = meshgrid(-8 : 0.5 : 8);
