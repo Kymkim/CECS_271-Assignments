@@ -1,5 +1,5 @@
 %{
-Name: Assignemt 1: Problem 1.2.a
+Name: Assignment 1: Problem 1.2
 Date: 09/04/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
