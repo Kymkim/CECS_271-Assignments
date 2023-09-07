@@ -21,19 +21,19 @@ the month, the interest rate, the amount of interest, and the new balance.
 %}
 
 format bank
-clear all
 A = zeros(1,12);    
 R = zeros(1,12);
 AR = zeros(1,12);
 
-A(1) = 100000;      % Inital Balance and rates
-AR(1) = 0;
-R(1) = 0;
+matrix = zeros(12,4);
+disp(matrix);
+
+A(1) = 100000;      % Inital Balance
     
 for m = [1:1:12]
     if A <= 110000
         R(m+1) = 0.01;
-        AR(m+1) = (A(m)*R(m));
+        AR(m) = (A(m)*R(m));
         A(m+1) = A(m) + AR(m) + 1000;
     elseif A <= 125000
         R(m) = 0.015;
@@ -46,11 +46,8 @@ for m = [1:1:12]
     end
 end
 
-disp(A);
-disp(AR);
-disp(R);
-
-%T = table([1:12]',R(2:13)',AR',A');
+T = table([1:12]',R',AR',A');
+disp(T)
 
 
 
