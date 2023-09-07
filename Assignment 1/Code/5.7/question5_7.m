@@ -1,3 +1,14 @@
+%{
+Name: Omar and Oliver
+Assignment 1: Problem 5.7
+Date: 09/06/23
+Class: CECS 271
+Instructor: Minhthong Nguyen
+Purpose: Calculate the cost of electricity used per residence
+Last Update: 09/07/2023
+%}
+
+
 res = [200; 500; 700; 1000; 1500];
 
 cost  = calculateElectricityCost(res);
