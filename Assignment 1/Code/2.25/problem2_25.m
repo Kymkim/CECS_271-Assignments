@@ -4,53 +4,38 @@ Date: 09/05/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
 Purpose: A program that displays the interest rate, amount of interest,
-balance of a savings account given in exercise  2.25 in Essential MATLABfor
+balance of a savings account given in exercise  2.25 in Essential MATLAB for
 Engineers and Scientists (6th Edition)
 Last updated: 09/05/2023
 %}
 
-%{
-Prealocating memory, initial variables, and format
-A = balance
-R = Interest Rate
-AR = Amount of Interest
 
-s: the number of
-the month, the interest rate, the amount of interest, and the new balance.
+%Prealocating memory to a matrix. Each column contains the month, interest
+%rate, amount of interest, and new balance in order from left to right.
+grid = zeros(12,4);
+balance = 100000;
 
-%}
+for month = [1:1:12]
+    grid(month,1) = month;
 
-format bank
-clear all
-A = zeros(1,12);    
-R = zeros(1,12);
-AR = zeros(1,12);
-
-A(1) = 100000;      % Inital Balance and rates
-AR(1) = 0;
-R(1) = 0;
-    
-for m = [1:1:12]
-    if A <= 110000
-        R(m+1) = 0.01;
-        AR(m+1) = (A(m)*R(m));
-        A(m+1) = A(m) + AR(m) + 1000;
-    elseif A <= 125000
-        R(m) = 0.015;
-        AR(m) = (A(m)*R(m));
-        A(m+1) = A(m) + AR(m) + 1000;
+    if balance < 110000
+        grid(month,2) = 0.01;
+    elseif balance <= 125000
+        grid(month,2) = 0.015;
     else
-        R(m) = 0.02;
-        AR(m) = (A(m)*R(m));
-        A(m+1) = A(m) + AR(m) + 1000;
+        grid(month,2) = 0.02;
     end
+    
+    grid(month,3) = grid(month,2) * balance;
+    grid(month,4) = grid(month,3) + balance + 1000;
+    balance = grid(month,4)
 end
 
-disp(A);
-disp(AR);
-disp(R);
+format bank
+colname = {'Month', 'Interest Rate', 'Amount of Interest', 'New Balance'}
+T = array2table(grid, 'VariableNames', colname)
 
-%T = table([1:12]',R(2:13)',AR',A');
+disp(T)
 
 
 

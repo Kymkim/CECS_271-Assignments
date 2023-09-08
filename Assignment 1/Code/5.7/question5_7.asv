@@ -7,11 +7,13 @@ Purpose: Calculate the cost of electricity used per residence
 Last Update: 09/07/2023
 %}
 
+
 res = [200; 500; 700; 1000; 1500];
+
 cost  = calculateElectricityCost(res);
+
 report = [res, cost]
 
-% Calculates electricity cost based on x units
 function cost = calculateElectricityCost(x)
     s = size(x);
     cost = [1:1:size(x)];
