@@ -1,0 +1,17 @@
+%{
+Name: Assignment 2: Problem 7.9
+Date: 09/20/2023
+Class: CECS 271
+Instructor: Minhthong Nguyen
+Purpose: Used for testing p.m from e^0 to e^10
+Last updated: 09/20/2023
+%}
+
+x = 2
+
+for n = 1:10
+    l = p(x,n)
+    disp("Using p function: " + num2str(l));
+    analytic = (n+1)*((3*pow(x,2))/2) - (((2*n)+1)*x*l) + (n*())
+
+end
