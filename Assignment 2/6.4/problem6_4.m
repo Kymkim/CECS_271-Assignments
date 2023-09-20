@@ -5,7 +5,7 @@ Class: CECS 271
 Instructor: Minhthong Nguyen
 Purpose: A script that solves a linear equation that demonstrates ill
 conditioning
-Last updated: 09/05/2023
+Last updated: 09/20/2023
 %}
 
 %Using left division to show x = 2 and y = 3.
@@ -60,7 +60,7 @@ disp("===================================================================")
 %Sensitivity Analysis. Testing with 1% change per iteration until 10%
 p = 0.01;
 while(p <= 0.1)
-    disp(["Testing with", num2str(p*100), "% change"]);
+    disp("Testing with " + num2str(p*100) + "% change");
     p_A = A + (A * p);
     p_x = p_A\B;
     disp(['Solution for the system of A and B x = ', num2str(p_x(1)), ' y = ', num2str(p_x(2))]);
