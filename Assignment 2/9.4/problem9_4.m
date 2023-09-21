@@ -19,18 +19,18 @@ d = 137.51;
 
 % create a vector of 1500 elements
 
-r = [1:t];
+r = [1:1500];
 
-for n = [1:t]
+for n = [1:1500]
     
     % distance formula according to the problem
     r(n) = sqrt(n);
 
 end
 
-theta = [1:t];
+theta = [1:1500];
 
-for n = [0:(t-1)]
+for n = [0:1499]
 
     % divergence formula according to the problem
     theta(n+1) = (pi*d*n)/180;
@@ -41,6 +41,6 @@ end
 
 polarplot(theta,r, 'o')
 
-% title the graph "Sunflower seeds model"
+%title the graph "Sunflower seeds model"
 
 title("Sunflower Seeds Model");
