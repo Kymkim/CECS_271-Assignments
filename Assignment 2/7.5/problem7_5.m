@@ -16,3 +16,15 @@ for x = 0:10
     disp("===========================================")
 end
  
+ function estimate = expTaylorEstimate(x)
+    estimate = 0;
+    n = 0;
+    while true
+        term = (x^n) / factorial(n);
+        if abs(term) < 1e-6
+            break;  % Stop when the term is smaller than the desired error
+        end
+        estimate = estimate + term;
+        n = n + 1;
+    end
+end
