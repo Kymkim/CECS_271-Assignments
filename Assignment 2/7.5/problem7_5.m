@@ -16,6 +16,8 @@ for x = 0:10
     disp("===========================================")
 end
  
+ % A function that returns the Taylor estimation of e^x with 1e-6m
+
  function estimate = expTaylorEstimate(x)
     estimate = 0;
     n = 0;
