@@ -3,8 +3,8 @@ Name: Bisection Method
 Date: 10/01/2023
 Class: CECS 271
 Instructor: Minhthong Nguyen
-Purpose: USolves the root using bisection method
-Last updated: 10/01/2023asdqwe
+Purpose: Solves the root using bisection method
+Last updated: 10/01/2023
 %}
 
 function [root, err, x] = bisec(f,a,b,tol,maxIter)
@@ -16,7 +16,7 @@ function [root, err, x] = bisec(f,a,b,tol,maxIter)
     %Check if f(a) and f(b) have different signs.
 
     if sign(f(a)) == sign(f(b))
-        disp("Invalid A and B. Pick different A or B")
+        err("Invalid A and B. Pick different A or B.")
     end
 
     %Bisection Method Implementation
