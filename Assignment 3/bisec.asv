@@ -30,19 +30,8 @@ function [root, err, x] = bisec(f,a,b,tol,maxIter)
             root = x(iter);
             return
         end
-        
-        %Check Estimates
-        if (f(x(iter)) > 0)
-            b = x(iter)
-        elseif (f(x(iter)) < 0)
-            a = x(iter)
-        else
-           root = x(iter);
-           return;
-        end
+
+        if f(x(iter)) > 
     end
-    
-    %Runs when we ran out of iterations
-    root = x(iter)
 end
 
