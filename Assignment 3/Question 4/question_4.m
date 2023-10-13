@@ -15,14 +15,14 @@ df = @(x) cos(x) + 0.5*(1/x);
 disp("ROOT 1 Bisection:")
 disp(b1);
 z = [x];
-disp("x,fx");
+disp("x iterations");
 disp(z);
 
 [b2, err, x] = bisec(f,4.6,1.85,1e-6,10);
 disp("ROOT 2 Bisection:")
 disp(b2);
 z = [x];
-disp("x,fx");
+disp("x iterations");
 disp(z);
 
 
