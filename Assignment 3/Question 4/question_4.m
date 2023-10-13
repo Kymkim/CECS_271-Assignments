@@ -43,7 +43,7 @@ disp(z);
 
 
 
-[sec1, fx, x] = secant(f, 7.5, 6, 1e-6, 10);
+[sec1, fx, x] = secant(f, 2, 3, 1e-6, 10);
 disp("ROOT 1 Secant:")
 disp(sec1);
 z = [x, fx];
@@ -51,7 +51,7 @@ disp("x,fx");
 disp(z);
 
 
-[sec2, fx, x] = secant(f, 2, 3, 1e-6, 10);
+[sec2, fx, x] = secant(f, 7.5, 6, 1e-6, 10);
 disp("ROOT 2 Secant:")
 disp(sec2);
 z = [x, fx];
@@ -67,6 +67,7 @@ disp("Bisection root 1:")
 disp(b1);
 error = truex1 - b1
 disp(" ");
+
 disp("true error 2 Bisection");
 disp("true value:")
 disp(truex2);
@@ -74,6 +75,7 @@ disp("Bisection root 2:")
 disp(b2);
 error = truex2 - b2
 disp(" ");
+
 disp("true error 1 Newton");
 disp("true value:")
 disp(truex1);
@@ -81,6 +83,7 @@ disp("Newton root 1:")
 disp(nr1);
 error = truex1 - nr1
 disp(" ");
+
 disp("true error 2 Newton");
 disp("true value:")
 disp(truex2);
@@ -88,6 +91,7 @@ disp("Newton root 2:")
 disp(nr2);
 error = truex2 - nr2
 disp(" ");
+
 disp("true error 1 Secant");
 disp("true value:")
 disp(truex1);
@@ -95,6 +99,7 @@ disp("Secant root 1:")
 disp(sec1);
 error = truex1 - sec1
 disp(" ");
+
 disp("true error 2 Secant");
 disp("true value:")
 disp(truex1);
