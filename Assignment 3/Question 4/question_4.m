@@ -14,14 +14,14 @@ df = @(x) cos(x) + 0.5*(1/x);
 [b1, err, x] = bisec(f,4.6,7.9,1e-6,10);
 disp("ROOT 1 Bisection:")
 disp(b1);
-z = [x, fx];
+z = [x];
 disp("x,fx");
 disp(z);
 
 [b2, err, x] = bisec(f,4.6,1.85,1e-6,10);
 disp("ROOT 2 Bisection:")
 disp(b2);
-z = [x, fx];
+z = [x];
 disp("x,fx");
 disp(z);
 
@@ -129,9 +129,9 @@ end
 
 function [root, err, x] = bisec(f,a,b,tol,maxIter)
     %Initializing variables
-    err = zeros(maxIter,1)
-    x = zeros(maxIter,1)
-    disp(err)
+    err = zeros(maxIter,1);
+    x = zeros(maxIter,1);
+    %disp(err)
 
     %Check if f(a) and f(b) have different signs.
 
@@ -153,9 +153,9 @@ function [root, err, x] = bisec(f,a,b,tol,maxIter)
         
         %Check Estimates
         if (f(x(iter)) > 0)
-            b = x(iter)
+            b = x(iter);
         elseif (f(x(iter)) < 0)
-            a = x(iter)
+            a = x(iter);
         else
            root = x(iter);
            return;
@@ -163,7 +163,7 @@ function [root, err, x] = bisec(f,a,b,tol,maxIter)
     end
     
     %Runs when we ran out of iterations
-    root = x(iter)
+    root = x(iter);
 end
 
 function [root, fx, x] = secant(f, x0, x1, tol, maxIter) %define the function
