@@ -11,14 +11,14 @@ f = @(x) sin(x) + 0.5*log(x);
 df = @(x) cos(x) + 0.5*(1/x);
 
 
-[b1, err, x] = bisec(f,4.6,7.9,1e-6,10);
+[b1, err, x] = bisec(f,4.6,1.85,1e-6,10);
 disp("ROOT 1 Bisection:")
 disp(b1);
 z = [x];
 disp("x iterations");
 disp(z);
 
-[b2, err, x] = bisec(f,4.6,1.85,1e-6,10);
+[b2, err, x] = bisec(f,4.6,7.9,1e-6,10);
 disp("ROOT 2 Bisection:")
 disp(b2);
 z = [x];
@@ -86,7 +86,7 @@ disp("true value:")
 disp(truex2);
 disp("Newton root 2:")
 disp(nr2);
-error = truex1 - nr2
+error = truex2 - nr2
 disp(" ");
 disp("true error 1 Secant");
 disp("true value:")
@@ -100,7 +100,7 @@ disp("true value:")
 disp(truex1);
 disp("Secant root 2:")
 disp(sec1);
-error = truex1 - sec2
+error = truex2 - sec2
 
 function [root, fx, x] = newraph(f, df, x0, tol, maxIter)
 
