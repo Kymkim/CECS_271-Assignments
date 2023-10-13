@@ -7,10 +7,6 @@ Purpose: using the secant method to find the root of a function
 Last updated: 10/11/23
 %}
 
-f = @(x) sin(x) + 0.5*log(x);
-secant(f, 6, 7, 1e-6, 10);
-
-
 function [root, fx, x] = secant(f, x0, x1, tol, maxIter) %define the function
     
     fx = zeros(maxIter+2, 1); %crerate a fx vector with 2 extra slots than maxIter
@@ -37,11 +33,4 @@ function [root, fx, x] = secant(f, x0, x1, tol, maxIter) %define the function
     end
     root = x(maxIter+2); %set rool = current x
     end
-
-    disp('ROOT: ')
-    disp (root)
-    disp('x, fx')
-    temp = [x, fx];
-    disp(temp)
-
 end
