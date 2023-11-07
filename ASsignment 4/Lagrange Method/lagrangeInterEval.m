@@ -1,13 +1,11 @@
 function val = lagrangeInterEval(x, y, xi)
-val = 0;
-
-    for c = 1:size(x,2)
-        Lj = lagrangeInter(c, x, xi);
-        temp = 1;
-        for s = 1:size(Lj,2)
-            temp = temp*Lj(1,s);
-        end
-        val = val + (y(1,c)*temp);
+    
+    % Initialize the value to be returned
+    val = 0;
+    
+    % Calculate the Lagrange interpolation using the Lagrange coefficients
+    for j = 1:length(x)
+        Lj = lagrangeInter(j, x, xi);
+        val = val + y(j) * Lj;
     end
-
 end

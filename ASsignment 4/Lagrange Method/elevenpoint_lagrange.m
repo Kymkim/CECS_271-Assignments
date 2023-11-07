@@ -4,8 +4,7 @@ f = @(x) x./(x.^4 + 1);
 x_values = -2:0.01:2;
 y_actual = f(x_values);
 
-rng(69420); % Seed 
-n_points = 5;
+n_points = 11;
 random = randperm(length(x_values), n_points);
 x_points = x_values(random);
 y_points = f(x_points);

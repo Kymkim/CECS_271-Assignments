@@ -1,14 +1,12 @@
-function Lj = lagrangeInter(j, x,  xi)
-
-    Lj = zeros(size(x,2));
-
-    for c = 1:size(x,2)
-        if c == j
-        Lj(1,c) = 0; 
-        else
-        Lj(1,c) = (xi - x(1,c))/(x(j) - x(1,c));
+function Lj = lagrangeInter(j, x, xi)
+    
+    % Initialize the Lagrange coefficient
+    Lj = 1;
+    
+    % Calculate the Lagrange coefficient using element-wise multiplication
+    for k = 1:length(x)
+        if k ~= j
+            Lj = Lj .* (xi - x(k)) / (x(j) - x(k));
         end
-
     end
-
 end
