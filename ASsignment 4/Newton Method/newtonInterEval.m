@@ -1,17 +1,27 @@
 function val = newtonInterEval (x, y, xi)
 
-a_inter = newtonInter(x, y);
-coe = zeros(size(a_inter));
-coe(1) = 1;
-A_SIZE = size(a_inter);
-for c = 2:A_SIZE(1,2)
-    coe(1,c) = xi - x(1,c);
+b_values = newtonInter(x,y);
+
+temp = zeros(size(x,2), size(xi,2));
+
+for i = 1:length(x)
+    for j = 1:length(xi)
+       if(i == 1)
+       temp(i,j) = 1;
+       else
+           temp(i,j) = xi(j) - x(i-1); % generate a table of the coefficients
+       end
+    end
 end
-val = 0;
-multi = 0;
-for c = 1:size(a_inter,2)
-    multi = multi * coe(1,c);
-    val = val + (a_inter(1,c)*multi);
+
+val = zeros(1,size(xi,2));
+multi = ones(1,length(xi));
+
+for i = 1:length(x)
+    for j = 1:length(xi)
+        multi(j) = multi(j) * temp(i,j);
+    end
+    val = val + b_values(i)*multi;
 end
 
 end
