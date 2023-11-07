@@ -1,20 +1,23 @@
 function a = newtonInter(x, y)
-a = zeros(sizeof(y));
+a = zeros(size(y));
 a(1) = y(1);
-delta = zeros(sizeof(y)-1);
+delta = zeros(size(y)-1);
 
-for c = 1:(sizeof(y)-1)
-    delta(c) = (y(c+1)-y(c))/(x(c+1)-x(c));
+Y_SIZE = size(y);
+for c = 1:(Y_SIZE(1,2)-1)
+    delta(1,c) = (y(1,c+1)-y(1,c))/(x(1,c+1)-x(1,c));
 end
 
-a(2) = delta(1);
+a(1,2) = delta(1,1);
+X_SIZE = size(x);
+DE_SIZE = size(delta);
 
-for c = 3:sizeof(x)
+for c = 3:X_SIZE(1,2)
 
-    for s = (c-1):sizeof(delta)
-        delta(s) = (delta(s)-delta(s-1))/(x(s+1)-x(s-c+2));
+    for s = (c-1):DE_SIZE(1,2)
+        delta(1,s) = (delta(1,s)-delta(1,(s-1)))/(x(1,s+1)-x(1,s-c+2));
 
     end
-    a(c) = delta(c-1);
+    a(1,c) = delta(1,c-1);
 end
 end

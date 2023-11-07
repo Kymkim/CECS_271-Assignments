@@ -1,12 +1,12 @@
 function Lj = lagrangeInter(j, x,  xi)
 
-    Lj = zeros(sizeof(x));
+    Lj = zeros(size(x,2));
 
-    for c = 1:sizeof(x)
+    for c = 1:size(x,2)
         if c == j
-        Lj(c) = 0; 
+        Lj(1,c) = 0; 
         else
-        Lj(c) = (xi - x(c))/(x(j) - x(c));
+        Lj(1,c) = (xi - x(1,c))/(x(j) - x(1,c));
         end
 
     end
