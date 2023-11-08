@@ -1,3 +1,12 @@
+%{
+Name: newtonInter
+Date: 11/07/2023
+Class: CECS 271
+Instructor: Minhthong Nguyen
+Purpose: Find the multiplication terms of Lagranges method
+Last updated: 11/07/2023
+%}
+
 function Lj = lagrangeInter(j, x, xi)
     
     % Initialize the Lagrange coefficient
