@@ -1,5 +1,15 @@
 f = @(x) x.*cos(x) - sin(x);
 
+%{
+Name: Assignment 5.1
+Date: 11/27/2023
+Class: CECS 271
+Instructor: Minhthong Nguyen
+Purpose: find the derivative of xcos(x) - sin(x)
+using forward backward and central methods
+Last updated: 11/27/2023
+%}
+
 stepsize = 1:7;
 stepsize(1) = 0.2;
 %present - prev / present
