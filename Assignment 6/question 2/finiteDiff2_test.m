@@ -21,12 +21,15 @@ N_values = [10, 20, 50, 100];
 figure;
 hold on;
 %get and plot graphs
+
 for i = 1:length(N_values)
     N = N_values(i);
     %ax, bx, cx, x0, xf, y0, yf, N
     [x_fd2, y_fd2] = finiteDiff2(a, b, c, x0, xf, y0, yf, N);
     plot(x_fd2, y_fd2, 'o-', 'DisplayName', sprintf('finite Difference N=%d', N));
 end
+
+
 
 hold off;
 xlabel('x');
