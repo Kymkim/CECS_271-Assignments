@@ -1,10 +1,11 @@
 # CECS 271: Lab/Assignments
 
-Repository for CECS 271 Lab and Assignments. Don't forget to push and commit changes! :)
+Repository for CECS 271 Lab and Assignments taught by Minthong Nguyen in CSULB. 
+
+Please use as a reference and not as a way to cheat on the class.
 
 ## Folder Layout
 
-To keep everything organized let's format the folders as such:
 ```
 Main Folder
 └── Assignment #
